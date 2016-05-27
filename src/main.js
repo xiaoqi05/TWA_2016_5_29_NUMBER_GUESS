@@ -1,5 +1,5 @@
 function getStudentLevels(inputs) {
-    var levels = loadLevel();
+    var levels = loadLevelScore();
     var result = [];
     inputs.forEach(function (item) {
         var index = getLevelIndexWithScore(levels, item);
@@ -19,7 +19,7 @@ function getLevelIndexWithScore(levels, score) {
 }
 
 function buildString(result) {
-    var levelString = ['D', 'C', 'B', 'A'];
+    var levelString = loadLevel();
     var resultString = "";
     result.forEach(function (item) {
         resultString += levelString[item - 1] || "-1";

@@ -1,14 +1,13 @@
 describe("studentLevel", function () {
     var inputs = [];
 
-
     beforeEach(function () {
         inputs = [
             0,
             3,
             60,
-            65,
-            80,
+            65.5,
+            80.5,
             85,
             90,
             95,
