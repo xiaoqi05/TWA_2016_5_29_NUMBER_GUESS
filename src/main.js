@@ -1,15 +1,15 @@
 function getStudentLevels(inputs) {
     var levels = loadLevel();
     var result = [];
-
     inputs.forEach(function (item) {
-        var index =getLevelWithScore(levels, item);
+        var index = getLevelIndexWithScore(levels, item);
         result.push(index);
     });
     console.log(buildString(result));
+    return buildString(result);
 }
 
-function getLevelWithScore(levels, score) {
+function getLevelIndexWithScore(levels, score) {
     for (var i = 0; i < levels.length; i++) {
         if (score < levels[i]) {
             return i;
@@ -20,10 +20,10 @@ function getLevelWithScore(levels, score) {
 
 function buildString(result) {
     var levelString = ['D', 'C', 'B', 'A'];
-    var resultString ="";
+    var resultString = "";
     result.forEach(function (item) {
-        resultString+=levelString[item-1]||"-1";
-    })
+        resultString += levelString[item - 1] || "-1";
+    });
     return resultString;
 }
 
