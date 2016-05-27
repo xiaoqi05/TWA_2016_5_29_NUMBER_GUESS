@@ -26,6 +26,3 @@ function buildString(result) {
     });
     return resultString;
 }
-
-
-

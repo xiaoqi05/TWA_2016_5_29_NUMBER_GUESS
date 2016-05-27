@@ -27,18 +27,12 @@ describe("studentLevel", function () {
         expect(result).toBe(expectText);
     });
 
-    it("should return right levels when error score", function () {
-        var result = getStudentLevels([-1, 101]);
-        var expectText = "-1-1";
-        expect(result).toBe(expectText);
-    });
 
     it("should return right levels when null score", function () {
         var result = getStudentLevels([]);
         var expectText = "";
         expect(result).toBe(expectText);
     });
-
 
 });
 
