@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>SCORE_GRADE</title>
+    <title>GUESS_NUMBER_GAME</title>
 
     <link rel="shortcut icon" type="image/png" href="./lib/jasmine-2.0.1/jasmine_favicon.png">
     <link rel="stylesheet" type="text/css" href="./lib/jasmine-2.0.1/jasmine.css">
@@ -12,11 +12,11 @@
     <script type="text/javascript" src="./lib/jasmine-2.0.1/boot.js"></script>
 
 
-    <script type="text/javascript" src="src/fixtures.js"></script>
-    <script type="text/javascript" src="src/main.js"></script>
+    <script type="text/javascript" src="src/GenerateNumber.js"></script>
 
     <!-- include spec files here... -->
-    <script type="text/javascript" src="spec/main-spec.js"></script>
+    <script type="text/javascript" src="spec/GenerateNumberSpec.js"></script>
+    <input id="inputNumber" name="inputNumber" type="number" onblur="passHint(this.value);" runat="server" title="xx"/>
 
 </head>
 
