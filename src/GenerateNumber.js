@@ -12,6 +12,5 @@ function generateNumber() {
     return result;
 }
 
-function passHint(Value) {
-    console.log(Value);
-}
+
+

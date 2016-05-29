@@ -21,12 +21,22 @@ describe("generate random number ", function () {
         expect(resultNumber).toEqual(jasmine.any(Number));
     });
 
+    it("should be 4 different digit", function () {
+        var result = generateNumber();
+        var isRepeat = false;
+        var checkSet = {};
+        for (var i = 0; i < 4; i++) {
+            var number = result.charAt(i);
+            isRepeat = checkSet[number] ? true : false;
+            checkSet[number] = true;
+        }
+        expect(isRepeat).toEqual(false);
+    });
+
     it("should be random(means should be not repeat)", function () {
         var mySet = new Set();
         for (var i = 0; i < 10; i++) {
             var result = generateNumber();
-            //noinspection JSUnresolvedFunction
-            console.debug(result);
             mySet.add(result);
         }
         expect(mySet.size).toEqual(10);
