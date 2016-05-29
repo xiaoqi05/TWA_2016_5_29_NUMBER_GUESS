@@ -12,7 +12,7 @@ describe("generate random number ", function () {
     it("should be 4 digit", function () {
         var result = generateNumber.getGenerateNumber();
         var resultNumber = parseInt(result);
-        expect(resultNumber.toString().length).toEqual(4);
+        expect(result.length).toEqual(4);
         expect(resultNumber).toEqual(jasmine.any(Number));
     });
 

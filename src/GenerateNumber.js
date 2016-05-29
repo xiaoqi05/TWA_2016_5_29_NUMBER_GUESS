@@ -9,9 +9,9 @@ GenerateNumber.prototype.getGenerateNumber = function () {
         var random = Math.floor(Math.random() * 10);
         mySet.add(random);
     }
-    //console.log(mySet.size);
     mySet.forEach(function (item) {
         result += item;
+        console.log(result);
     });
     return result;
 };
