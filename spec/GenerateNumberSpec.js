@@ -23,8 +23,10 @@ describe("generate random number ", function () {
 
     it("should be random(means should be not repeat)", function () {
         var mySet = new Set();
-        for (var i = 0; i < 9; i++) {
+        for (var i = 0; i < 10; i++) {
             var result = generateNumber();
+            //noinspection JSUnresolvedFunction
+            console.debug(result);
             mySet.add(result);
         }
         expect(mySet.size).toEqual(10);
