@@ -1,28 +1,23 @@
 describe("generate random number ", function () {
-    var inputs = [];
-
+    var generateNumber;
     beforeEach(function () {
-        inputs = [
-            0,
-            95,
-            100
-        ];
+        generateNumber = new GenerateNumber();
     });
 
     it("should have 4 length", function () {
-        var result = generateNumber().length;
+        var result = generateNumber.getGenerateNumber().length;
         expect(result).toBe(4);
     });
 
     it("should be 4 digit", function () {
-        var result = generateNumber();
+        var result = generateNumber.getGenerateNumber();
         var resultNumber = parseInt(result);
         expect(resultNumber.toString().length).toEqual(4);
         expect(resultNumber).toEqual(jasmine.any(Number));
     });
 
     it("should be 4 different digit", function () {
-        var result = generateNumber();
+        var result = generateNumber.getGenerateNumber();
         var isRepeat = false;
         var checkSet = {};
         for (var i = 0; i < 4; i++) {
@@ -36,12 +31,11 @@ describe("generate random number ", function () {
     it("should be random(means should be not repeat)", function () {
         var mySet = new Set();
         for (var i = 0; i < 10; i++) {
-            var result = generateNumber();
+            var result = generateNumber.getGenerateNumber();
             mySet.add(result);
         }
         expect(mySet.size).toEqual(10);
     });
-
 
 });
 

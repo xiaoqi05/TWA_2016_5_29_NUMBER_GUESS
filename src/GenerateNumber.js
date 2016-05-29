@@ -1,4 +1,8 @@
-function generateNumber() {
+function GenerateNumber() {
+
+}
+
+GenerateNumber.prototype.getGenerateNumber = function () {
     var result = '';
     var mySet = new Set();
     while (mySet.size != 4) {
@@ -10,7 +14,9 @@ function generateNumber() {
         result += item;
     });
     return result;
-}
+};
+
+
 
 
 
