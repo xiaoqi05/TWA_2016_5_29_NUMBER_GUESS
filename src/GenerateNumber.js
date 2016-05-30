@@ -11,7 +11,6 @@ GenerateNumber.prototype.getGenerateNumber = function () {
     }
     mySet.forEach(function (item) {
         result += item;
-        console.log(result);
     });
     return result;
 };
