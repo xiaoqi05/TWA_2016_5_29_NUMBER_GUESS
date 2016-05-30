@@ -12,14 +12,11 @@ var change = 6;
 function Game(Value) {
     var gameController = new GameController();
     if (checkInputValid(Value)) {
-        if (change == 0) {
-            alert("Game over");
-            return;
-        }
         var result = gameController.startGame(Value);
         if (result != "4A0B") {
             change--;
-            alert("输入错误\n" + result + "\n剩余" + change + "机会");
+            var alertInfo = change == 0 ? "Game over" : "输入错误\n" + result + "\n剩余" + change + "机会";
+            alert(alertInfo);
         } else {
             alert("GAME PASS!!!")
         }
