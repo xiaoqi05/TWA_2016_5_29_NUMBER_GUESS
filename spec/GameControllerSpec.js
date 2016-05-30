@@ -5,18 +5,10 @@ describe("GameController Controller", function () {
         generateNumber = new GenerateNumber();
     });
 
-    it("should return when input error",function () {
-        guessNumber ="1234";
-        expect(startGame(guessNumber)).toEqual("Guess wrong");
-    });
-
-
-
-    it('when call gameController with right input at first time then return congratulations', function () {
-
-        spyOn(generateNumber.getGenerateNumber(),'new GenerateNumber().getGenerateNumber').and.returnValue("1234");
-        var guessNumber = "1234";
-        expect(GameController(guessNumber)).toEqual(true);
+    it("when call gameController with right input at first time then return congratulations", function () {
+        guessNumber = "1234";
+        spyOn(generateNumber, "getGenerateNumber").and.returnValue("1234");
+        expect(startGame(guessNumber)).toEqual("4A0B");
     });
 
 
