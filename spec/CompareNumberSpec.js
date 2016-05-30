@@ -5,7 +5,7 @@ describe("CompareNumberSpec", function () {
 
     beforeEach(function () {
         compare = new CompareNumber();
-    });
+    }); 
 
     it("1234 & 1234 should be output 4A0B", function () {
         generateNumber = "1234";
