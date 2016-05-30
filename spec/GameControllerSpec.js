@@ -1,13 +1,23 @@
-describe("Game Controller", function () {
-    var gameController;
+describe("GameController Controller", function () {
     var guessNumber;
+    var generateNumber;
     beforeEach(function () {
-        gameController = new GameController();
+        generateNumber = new GenerateNumber();
     });
 
     it("should return when input error",function () {
         guessNumber ="1234";
-        expect(gameController.startGame(guessNumber)).toEqual("Guess wrong");
+        expect(startGame(guessNumber)).toEqual("Guess wrong");
     });
+
+
+
+    it('when call gameController with right input at first time then return congratulations', function () {
+
+        spyOn(generateNumber.getGenerateNumber(),'new GenerateNumber().getGenerateNumber').and.returnValue("1234");
+        var guessNumber = "1234";
+        expect(GameController(guessNumber)).toEqual(true);
+    });
+
 
 });
